@@ -69,6 +69,7 @@ dependencies:
   latlong: ^0.6.1
   autocomplete_textfield: ^1.7.3
   json_annotation: ^3.0.1
+  flutter_swiper: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -98,7 +99,6 @@ flutter_icons:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
