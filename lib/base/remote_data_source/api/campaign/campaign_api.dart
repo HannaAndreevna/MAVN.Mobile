@@ -70,4 +70,11 @@ class CampaignApi extends BaseApi {
         );
         return VoucherPurchaseResponseModel.fromJson(response.data);
       });
+
+  Future<CampaignListResponseModel> getPopularCampaigns() async {
+    //TODO:This is mock solution. Implement when BE will be ready
+
+    return await CampaignListResponseModel(
+        campaigns: [], totalCount: [].length);
+  }
 }

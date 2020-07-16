@@ -14,7 +14,7 @@ import 'package:lykke_mobile_mavn/feature_balance/bloc/balance/balance_bloc.dart
 import 'package:lykke_mobile_mavn/feature_bottom_bar/bloc/bottom_bar_page_bloc.dart';
 import 'package:lykke_mobile_mavn/feature_bottom_bar/bloc/bottom_bar_refresh_bloc_output.dart';
 import 'package:lykke_mobile_mavn/feature_home/ui_elements/home_sliver_widget.dart';
-import 'package:lykke_mobile_mavn/feature_home/ui_elements/popular_offers_swiper.dart';
+import 'package:lykke_mobile_mavn/feature_home/ui_elements/popular_offers_widget.dart';
 import 'package:lykke_mobile_mavn/feature_home/ui_elements/shortcut/home_shortcut_carousel.dart';
 import 'package:lykke_mobile_mavn/feature_home/view/earn_token_section.dart';
 import 'package:lykke_mobile_mavn/feature_notification/bloc/notification_count_bloc.dart';
@@ -205,7 +205,7 @@ class HomePage extends HookWidget {
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          PopularOffersSwiper(),
+          PopularOffersWidget(),
           HomeShortcutCarouselWidget(earnRuleListState: earnRuleListState),
           const SizedBox(height: 24),
           EarnTokenSection(

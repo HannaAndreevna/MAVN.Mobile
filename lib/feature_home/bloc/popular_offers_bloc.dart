@@ -5,7 +5,6 @@ import 'package:lykke_mobile_mavn/base/remote_data_source/api/campaign/response_
 import 'package:lykke_mobile_mavn/base/repository/campaign/campaign_repository.dart';
 import 'package:lykke_mobile_mavn/feature_home/di/home_page_module.dart';
 import 'package:lykke_mobile_mavn/library_dependency_injection/core.dart';
-import 'package:lykke_mobile_mavn/library_models/fiat_currency.dart';
 
 class PopularOffersBloc
     extends GenericListBloc<CampaignListResponseModel, CampaignResponseModel> {
@@ -23,20 +22,9 @@ class PopularOffersBloc
   int getTotalCount(CampaignListResponseModel response) => response.totalCount;
 
   @override
-  Future<CampaignListResponseModel> loadData(int page) async {
-    List<CampaignResponseModel> compaigns = [];
-    CampaignResponseModel compaign = CampaignResponseModel(
-        id: 151.toString(),
-        partnerId: "d9643c46-80f3-4b72-a9cc-b5c2247ce454",
-        partnerName: "P Test",
-        imageUrl:
-            "https://openmavnsmartvouchers.blob.core.windows.net/campaignfiles/9f15d86f-f136-4148-a8f8-f29098c7652e.jpeg",
-        price: FiatCurrency(assetSymbol: 'CHF', value: 20));
-    compaigns.add(compaign);
-    return await CampaignListResponseModel(
-        campaigns: compaigns, totalCount: compaigns.length);
-  }
+  Future<CampaignListResponseModel> loadData(int page) =>
+      _campaignRepository.getPopularCampaigns();
 }
 
-PopularOffersBloc useCampaignListBloc() =>
+PopularOffersBloc usePopularOffersListBloc() =>
     ModuleProvider.of<HomePageModule>(useContext()).popularOffersBloc;

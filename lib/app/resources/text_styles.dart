@@ -505,4 +505,19 @@ class TextStyles {
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.w800,
   );
+
+  static const TextStyle secondaryCallToAction = TextStyle(
+    color: ColorStyles.resolutionBlue,
+    fontFamily: commonFontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle popularOffers = TextStyle(
+    color: ColorStyles.black,
+    fontFamily: commonFontFamily,
+    fontSize: 18,
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w800,
+  );
 }

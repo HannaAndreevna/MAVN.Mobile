@@ -40,4 +40,7 @@ class CampaignRepository {
     @required String id,
   }) =>
       _campaignApi.purchaseVoucher(VoucherPurchaseRequestModel(campaignId: id));
+
+  Future<CampaignListResponseModel> getPopularCampaigns() =>
+      _campaignApi.getPopularCampaigns();
 }
